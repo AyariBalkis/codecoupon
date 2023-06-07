@@ -1,0 +1,16 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root@localhost/coupon_codes"
+}
+
+model Coupon {
+  id        Int      @id @default(autoincrement())
+  code      String
+  discount  Float
+  store String
+  
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
